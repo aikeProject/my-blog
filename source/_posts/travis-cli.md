@@ -1,10 +1,7 @@
 ---
 title: travis-cli
-categories:
-  - 前端
-  - 工具
-tags:
-  - 构建
+categories: 前端
+tags: 构建
 comments: false
 date: 2019-02-22 10:58:51
 ---
