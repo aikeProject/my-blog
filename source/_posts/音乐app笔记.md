@@ -1,5 +1,5 @@
 ---
-title: 音乐app笔记'
+title: 音乐app笔记
 categories:
   - 前端
 tags:
