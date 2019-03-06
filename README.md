@@ -74,3 +74,4 @@ env:
 -   正则.md
 -   翻墙.md
 -   音乐app笔记.md
+-   scrapy
