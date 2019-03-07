@@ -25,11 +25,12 @@
     ====================================================*/
 
     // CSS预处理
+    // 去掉这个通知插件，不然自动打包的时候报错
+    //.pipe(plumber({
+    //   errorHandler: notify.onError('Error: <%= error.message %>')
+    // }))
     gulp.task('less-task', function() {
         return gulp.src(paths.source + 'css/less/_style.less')
-        .pipe(plumber({
-            errorHandler: notify.onError('Error: <%= error.message %>')
-        }))
         .pipe(less())
         .pipe(rename({basename: "style"}))
         .pipe(gulp.dest(paths.source + 'css'))
