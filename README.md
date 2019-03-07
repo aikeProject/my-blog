@@ -75,3 +75,9 @@ env:
 -   翻墙.md
 -   音乐app笔记.md
 -   scrapy
+-   pyquery
+-   urllib
+-   requests
+-   regex
+-   Selenium
+-   beautifulsoup
