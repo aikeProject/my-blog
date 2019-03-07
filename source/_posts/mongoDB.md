@@ -5,6 +5,7 @@ categories:
 tags:
   - mongodb
 comments: false
+abbrlink: 2240
 date: 2019-03-05 20:16:50
 ---
 

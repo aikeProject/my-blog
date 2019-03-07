@@ -5,6 +5,7 @@ categories:
 tags:
   - vim
 comments: false
+abbrlink: 22091
 date: 2019-03-05 20:05:17
 ---
 

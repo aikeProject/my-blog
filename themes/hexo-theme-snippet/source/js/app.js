@@ -11,6 +11,8 @@ window.onload = function() {
         $gitcomment = document.getElementById("gitcomment"),
         $backToTop = document.getElementById("back-to-top"),
         $toc = document.getElementById("article-toc"),
+        // iframe处理
+        $iframe = document.querySelectorAll('iframe');
         timer = null;
 
     //设备判断
@@ -113,4 +115,13 @@ window.onload = function() {
 	    });
 	};
 
+	// iframe
+    for (let i = 0; i < $iframe.length; i++) {
+        console.log($iframe[i])
+        $iframe[i].setAttribute('border', '0');
+        $iframe[i].setAttribute('frameborder', 'no');
+        $iframe[i].setAttribute('marginwidth', '0');
+        $iframe[i].setAttribute('marginheight', '0');
+        $iframe[i].setAttribute('allowtransparency', 'yes');
+    }
 };
