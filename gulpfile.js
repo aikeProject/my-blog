@@ -47,8 +47,9 @@
 
     // 监听任务-主题开发模式
     gulp.task('dev', function() {
-        gulp.watch(paths.source + 'css/less/*.less', ['less-task']);
-        // gulp.watch(paths.source + 'js/*.js', ['js-task']);
+        gulp.watch(paths.source + 'css/less/*.less', gulp.series('less-task'));
+        // 不开了报错太多.....
+        // gulp.watch(paths.source + 'js/*.js', gulp.series('js-task'));
     });
 
 
@@ -98,11 +99,8 @@
         .pipe(gulp.dest('./public'));
     });
 
-    // 同步执行task
-    gulp.task('deploy',sequence(['minify-css','minify-js'],'rev','minify-html'));
-
     // 部署前代码处理
-    gulp.task('default',['deploy'],function(e){
+    gulp.task('default',gulp.series(gulp.parallel('minify-css', 'minify-js'), 'rev', 'minify-html'), function(e){
        console.log("[complete] please execute： hexo d");
     })
 })();

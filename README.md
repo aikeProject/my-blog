@@ -75,3 +75,13 @@ env:
 -   翻墙.md
 -   音乐app笔记.md
 -   scrapy
+
+#### gulp升级`gulp4.0.0`
+```js
+// gulp.series：同步执行
+// gulp.paralle：并行执行
+// 例如
+gulp.task('default',gulp.series(gulp.parallel('minify-css', 'minify-js'), 'rev', 'minify-html'), function(e){
+       console.log("[complete] please execute： hexo d");
+ })
+```
