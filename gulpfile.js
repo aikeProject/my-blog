@@ -6,51 +6,29 @@
         minifycss = require('gulp-minify-css'),
         autoprefixer = require('gulp-autoprefixer'),
         uglify = require('gulp-uglify'),
-        jshint = require('gulp-jshint'),
-        stylish = require('jshint-stylish'),
-        notify = require('gulp-notify'),
-        plumber = require('gulp-plumber'),
         htmlclean = require('gulp-htmlclean'),
         htmlmin = require('gulp-htmlmin'),
         rev = require('gulp-rev-append'),
-        sequence = require('gulp-sequence'),
-        path = require('path'),
         paths = {
             root: './',
             source: './themes/hexo-theme-snippet/source/' //主题下原文件
-        }
+        };
 
     /*====================================================
          开发主题
     ====================================================*/
 
     // CSS预处理
-    // 去掉这个通知插件，不然自动打包的时候报错
-    //.pipe(plumber({
-    //   errorHandler: notify.onError('Error: <%= error.message %>')
-    // }))
     gulp.task('less-task', function() {
         return gulp.src(paths.source + 'css/less/_style.less')
         .pipe(less())
         .pipe(rename({basename: "style"}))
         .pipe(gulp.dest(paths.source + 'css'))
-        .pipe(notify({message: 'less compile complete'}));
-    });
-
-    // 校验JS语法和风格
-    gulp.task('js-task', function() {
-        return gulp.src(paths.source + 'js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter(stylish))
-        .pipe(gulp.dest(paths.source + 'js/'))
-        .pipe(notify({message: 'js compile complete'}));
     });
 
     // 监听任务-主题开发模式
     gulp.task('dev', function() {
         gulp.watch(paths.source + 'css/less/*.less', gulp.series('less-task'));
-        // 不开了报错太多.....
-        // gulp.watch(paths.source + 'js/*.js', gulp.series('js-task'));
     });
 
 
@@ -68,7 +46,6 @@
         }))
         .pipe(minifycss())
         .pipe(gulp.dest('./public'))
-        .pipe(notify({message: 'css minify complete'}));
     });
 
     // 压缩处理 js
@@ -76,7 +53,6 @@
         return gulp.src('./public/js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'))
-        .pipe(notify({message: 'js minify complete'}));
     });
 
     // 压缩处理 html
