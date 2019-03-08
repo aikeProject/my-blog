@@ -6,19 +6,13 @@
         minifycss = require('gulp-minify-css'),
         autoprefixer = require('gulp-autoprefixer'),
         uglify = require('gulp-uglify'),
-        jshint = require('gulp-jshint'),
-        stylish = require('jshint-stylish'),
-        notify = require('gulp-notify'),
-        plumber = require('gulp-plumber'),
         htmlclean = require('gulp-htmlclean'),
         htmlmin = require('gulp-htmlmin'),
         rev = require('gulp-rev-append'),
-        sequence = require('gulp-sequence'),
-        path = require('path'),
         paths = {
             root: './',
             source: './themes/hexo-theme-snippet/source/' //主题下原文件
-        }
+        };
 
     /*====================================================
          开发主题
@@ -27,28 +21,14 @@
     // CSS预处理
     gulp.task('less-task', function() {
         return gulp.src(paths.source + 'css/less/_style.less')
-        .pipe(plumber({
-            errorHandler: notify.onError('Error: <%= error.message %>')
-        }))
         .pipe(less())
         .pipe(rename({basename: "style"}))
         .pipe(gulp.dest(paths.source + 'css'))
-        .pipe(notify({message: 'less compile complete'}));
-    });
-
-    // 校验JS语法和风格
-    gulp.task('js-task', function() {
-        return gulp.src(paths.source + 'js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter(stylish))
-        .pipe(gulp.dest(paths.source + 'js/'))
-        .pipe(notify({message: 'js compile complete'}));
     });
 
     // 监听任务-主题开发模式
     gulp.task('dev', function() {
-        gulp.watch(paths.source + 'css/less/*.less', ['less-task']);
-        // gulp.watch(paths.source + 'js/*.js', ['js-task']);
+        gulp.watch(paths.source + 'css/less/*.less', gulp.series('less-task'));
     });
 
 
@@ -66,7 +46,6 @@
         }))
         .pipe(minifycss())
         .pipe(gulp.dest('./public'))
-        .pipe(notify({message: 'css minify complete'}));
     });
 
     // 压缩处理 js
@@ -74,7 +53,6 @@
         return gulp.src('./public/js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'))
-        .pipe(notify({message: 'js minify complete'}));
     });
 
     // 压缩处理 html
@@ -98,11 +76,8 @@
         .pipe(gulp.dest('./public'));
     });
 
-    // 同步执行task
-    gulp.task('deploy',sequence(['minify-css','minify-js'],'rev','minify-html'));
-
     // 部署前代码处理
-    gulp.task('default',['deploy'],function(e){
+    gulp.task('default',gulp.series(gulp.parallel('minify-css', 'minify-js'), 'rev', 'minify-html'), function(e){
        console.log("[complete] please execute： hexo d");
     })
 })();

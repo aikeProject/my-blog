@@ -22,6 +22,7 @@ notifications:
 before_install:
 - npm install -g hexo
 - npm install -g hexo-cli
+- npm install -g gulp
 
 install:
 - npm install
@@ -29,7 +30,8 @@ install:
 script:
 # - hexo clean
 # - hexo generate
-- npm run generate
+# - npm run generate
+- npm run build
 
 after_success:
   # - hexo deploy

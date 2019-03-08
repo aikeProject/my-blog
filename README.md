@@ -81,3 +81,13 @@ env:
 -   regex
 -   Selenium
 -   beautifulsoup
+
+#### gulp升级`gulp4.0.0`
+```js
+// gulp.series：同步执行
+// gulp.paralle：并行执行
+// 例如
+gulp.task('default',gulp.series(gulp.parallel('minify-css', 'minify-js'), 'rev', 'minify-html'), function(e){
+       console.log("[complete] please execute： hexo d");
+ })
+
