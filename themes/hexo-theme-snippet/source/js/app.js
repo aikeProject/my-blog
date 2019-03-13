@@ -117,7 +117,7 @@ window.onload = function () {
         });
     };
 
-    // iframe
+    //iframe
     (function () {
         for (var i = 0; i < $iframe.length; i++) {
             console.log($iframe[i]);

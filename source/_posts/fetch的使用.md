@@ -4,7 +4,7 @@ categories:
   - 前端
 tags:
   - fetch
-comments: false
+comments: true
 abbrlink: 61195
 date: 2019-03-05 20:21:53
 ---

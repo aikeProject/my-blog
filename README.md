@@ -75,6 +75,12 @@ env:
 -   翻墙.md
 -   音乐app笔记.md
 -   scrapy
+-   pyquery
+-   urllib
+-   requests
+-   regex
+-   Selenium
+-   beautifulsoup
 
 #### gulp升级`gulp4.0.0`
 ```js
@@ -84,4 +90,4 @@ env:
 gulp.task('default',gulp.series(gulp.parallel('minify-css', 'minify-js'), 'rev', 'minify-html'), function(e){
        console.log("[complete] please execute： hexo d");
  })
-```
+

@@ -5,7 +5,7 @@ categories:
 tags:
   - flex
   - css
-comments: false
+comments: true
 abbrlink: 59381
 date: 2019-03-05 20:23:09
 ---

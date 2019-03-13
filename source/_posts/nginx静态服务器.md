@@ -5,7 +5,7 @@ categories:
 tags:
   - nginx
   - 部署
-comments: false
+comments: true
 abbrlink: 60436
 date: 2019-03-05 19:46:36
 ---

@@ -4,7 +4,7 @@ categories:
   - 工具
 tags:
   - vim
-comments: false
+comments: true
 abbrlink: 22091
 date: 2019-03-05 20:05:17
 ---
