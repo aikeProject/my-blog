@@ -4,7 +4,7 @@ categories:
   - 后端
 tags:
   - linux
-comments: false
+comments: true
 abbrlink: 33983
 date: 2019-03-05 19:48:15
 ---

@@ -5,7 +5,7 @@ categories:
 tags:
   - zepto
   - js
-comments: false
+comments: true
 date: 2019-03-12 15:53:50
 ---
 

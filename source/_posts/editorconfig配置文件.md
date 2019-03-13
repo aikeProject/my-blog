@@ -4,7 +4,7 @@ categories:
   - 前端
 tags:
   - editorconfig
-comments: false
+comments: true
 abbrlink: 23458
 date: 2019-03-05 20:19:46
 ---

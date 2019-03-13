@@ -5,7 +5,7 @@ categories:
 tags:
   - python
   - beautifulsoup
-comments: false
+comments: true
 abbrlink: 28643
 date: 2019-03-06 14:42:45
 ---

@@ -2,7 +2,7 @@
 title: travis-cli
 categories: 前端
 tags: 构建
-comments: false
+comments: true
 abbrlink: 53751
 date: 2019-02-22 10:58:51
 ---

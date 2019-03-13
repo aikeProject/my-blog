@@ -4,7 +4,7 @@ categories:
   - 前端
 tags:
   - mongodb
-comments: false
+comments: true
 abbrlink: 2240
 date: 2019-03-05 20:16:50
 ---
