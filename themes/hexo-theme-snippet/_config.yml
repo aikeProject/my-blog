@@ -167,10 +167,10 @@ reward:
 
 ## Valine评论
 valine:
-   enable: false
-   appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
-   appKey: erIpQac4azoCmgfBB7Dl9maa
-   placeholder: 说点什么吧
+   enable: true
+   appId: 4fxhv6ljJpn9Ri1OJgXCMQCH-gzGzoHsz
+   appKey: ef2FdLkY74Ypgpu6k9FDcGep
+   placeholder: 畅所欲言
    notify: false
    verify: false
    avatar: mm
@@ -190,7 +190,7 @@ livere:
 
 ## Gitalk评论
 gitalk:
-   enable: true
+   enable: false
    clientID: 97c9a07816786bfd4bfd
    clientSecret: 816b054172c6b9d17e254f20391b937bf08e8da3
    repo: my-blog
