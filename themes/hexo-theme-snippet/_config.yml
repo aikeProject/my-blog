@@ -167,7 +167,7 @@ reward:
 
 ## Valine评论
 valine:
-   enable: true
+   enable: false
    appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
    appKey: erIpQac4azoCmgfBB7Dl9maa
    placeholder: 说点什么吧
@@ -222,16 +222,16 @@ uyan:
 
 ## 网站访客统计
 visit_counter:
-   site: false
-   page: false
+   site: true
+   page: true
 
 ## 网站访问统计分析
 
 ### 网盟CNZZ统计
-cnzz_analytics: 1263868967
+cnzz_analytics:
 
 ### 百度统计
-baidu_analytics:
+baidu_analytics: ccd98c2d3b145ffad4c50be87f40400b
 
 ### 谷歌统计
 google_analytics:
@@ -240,10 +240,10 @@ google_analytics:
 tencent_analytics:
 
 ### 百度站点认证
-baidu_site_verification:
+baidu_site_verification: Ic3zHIPe6C
 
 ### 百度自动推送
-baidu_push: false
+baidu_push: true
 
 #网站主题配置
 since: 2017
