@@ -32,7 +32,7 @@ date: 2019-03-12 15:53:50
 });
 ```
 -   一些知识点
-    - 真伪数组转换
+- 真伪数组转换
     ```js
     // 真数组转化为伪数组
     var obj = {};
@@ -65,30 +65,30 @@ date: 2019-03-12 15:53:50
         console.log(arr);
     ```
     
-    - nodeType
+- nodeType
     
-	| 节点类型                        | 描述                                                                                  | 子节点                                                                               |
-	|  --------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-	| Element                         | 代表元素                                                                            | Element, Text, Comment, ProcessingInstruction, CDATASection, EntityReference |
-	| Attr                                | 代表属性                                                                             | Text, EntityReference |
-	| Text                               | 代表元素或属性中的文本内容。                                         | None |
-	| CDATASection              | 代表文档中的 CDATA 部分（不会由解析器解析的文本）。 | None |
-	| EntityReference            | 代表实体引用。                                                                     |  Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference |
-	| Entity                             | 代表实体。                                                                            |  Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference |
-	| ProcessingInstruction   | 代表处理指令。                                                                     |  None|
-	| Comment                      | 代表注释。                                                                             |  None |
-	| Document                     | 代表整个文档（DOM 树的根节点）。                                    |  Element, ProcessingInstruction, Comment, DocumentType|
-	| DocumentFragment     | 代表轻量级的 Document 对象，能够容纳文档的某个部分     | Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference  |
-	| Notation                       |  代表 DTD 中声明的符号。                                                     |  None |
+| 节点类型                        | 描述                                                                                  | 子节点                                                                               |
+|  --------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Element                         | 代表元素                                                                            | Element, Text, Comment, ProcessingInstruction, CDATASection, EntityReference |
+| Attr                                | 代表属性                                                                             | Text, EntityReference |
+| Text                               | 代表元素或属性中的文本内容。                                         | None |
+| CDATASection              | 代表文档中的 CDATA 部分（不会由解析器解析的文本）。 | None |
+| EntityReference            | 代表实体引用。                                                                     |  Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference |
+| Entity                             | 代表实体。                                                                            |  Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference |
+| ProcessingInstruction   | 代表处理指令。                                                                     |  None|
+| Comment                      | 代表注释。                                                                             |  None |
+| Document                     | 代表整个文档（DOM 树的根节点）。                                    |  Element, ProcessingInstruction, Comment, DocumentType|
+| DocumentFragment     | 代表轻量级的 Document 对象，能够容纳文档的某个部分     | Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference  |
+| Notation                       |  代表 DTD 中声明的符号。                                                     |  None |
 
-    -   'readyState' HTML DOM readyState 属性返回当前文档状态  `document.readyState` [详见](https://segmentfault.com/a/1190000005869515)
+-   'readyState' HTML DOM readyState 属性返回当前文档状态  `document.readyState` [详见](https://segmentfault.com/a/1190000005869515)
 
-	|  readyState   |  返回值   |
-	| --- | --- |
-	|  uninitialized     | 还未开始载入    |
-	|  loading    | 载入中    |
-	|  interactive     | 已加载，文档与用户可以交互    |
-	|  complete    |  载入完成  |     
+|  readyState   |  返回值   |
+| --- | --- |
+|  uninitialized     | 还未开始载入    |
+|  loading    | 载入中    |
+|  interactive     | 已加载，文档与用户可以交互    |
+|  complete    |  载入完成  |     
 	
 	-  关于页面加载的一些事件
 		-  `onload`事件，`window.onload`. 作用: onload事件的实际效果是当页面解析完DOM树，并且完成了所有图片、样式表、脚本等资源的加载后才被触发
