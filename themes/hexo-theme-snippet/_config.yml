@@ -193,9 +193,9 @@ gitalk:
    enable: true
    clientID: 97c9a07816786bfd4bfd
    clientSecret: 816b054172c6b9d17e254f20391b937bf08e8da3
-   repo: aikeProject.github.io
-   owner: 1121352970@qq.com
-   admin: 1121352970@qq.com
+   repo: my-blog
+   owner: aikeProject
+   admin: https://github.com/aikeProject/my-blog
    perPage: 10
    id:
 
