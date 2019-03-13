@@ -195,7 +195,7 @@ gitalk:
    clientSecret: 816b054172c6b9d17e254f20391b937bf08e8da3
    repo: my-blog
    owner: aikeProject
-   admin: aikeProject
+   admin: 1121352970@qq.com
    perPage: 10
    id:
 
