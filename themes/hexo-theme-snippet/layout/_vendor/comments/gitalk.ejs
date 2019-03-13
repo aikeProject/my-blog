@@ -15,7 +15,8 @@
         owner: "<%= theme.gitalk.owner%>",
         admin: "[<%= theme.gitalk.admin%>]",
         id: "<%= theme.gitalk.id%>" || pathId || location.pathname,
-        distractionFreeMode: true
+        distractionFreeMode: true,
+        createIssueManually: true
     });
     gitalk.render('gitalk-container');
 </script>
